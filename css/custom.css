@@ -1,0 +1,136 @@
+
+
+header {
+    background-color: #124E96;
+
+}
+
+header .navbar-nav a.nav-link {
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+header .navbar-nav a.nav-link:hover {
+    color: #FFFFFF;
+    opacity: 1.0;
+}
+
+header .navbar-nav .active a.nav-link {
+    color: #FFFFFF;
+    opacity: 1.0;
+}
+
+.navbar-brand {
+    padding-right: 60px;
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding: .75em;
+    }
+
+}
+
+.navbar {
+    padding: calc(2.5vw + 10px) 0;
+}
+
+
+.btn.btn-empty:hover {
+    background-color: #0D8ABC;
+
+}
+
+.btn {
+    background-color: #0D8ABC;
+    border: solid 2px #0D8ABC;
+    color: #FFFFFF;
+}
+
+.btn:hover {
+    background-color: #0D8ABC;
+    border: solid 2px #0D8ABC;
+    opacity: 0.8;
+}
+
+.top-banner {
+    background-color: #124E96;
+    padding-top: calc(2rem + 5vw);
+    padding-bottom: calc(5rem + 15vw);
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, a, b, big, blockquote, br, button, caption, code, dd, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, hr, i, img, input, label, legend, li, ol, p, pre, script, select, small, span, strike, strong, sub, sup, table, tbody, td, textarea, tfoot, th, thead, tr, ul {
+    color: #FFFFFF;
+}
+
+.fdb-block h1, .fdb-block .text-h1 {
+    font-size: 3.75rem;
+    margin-bottom: .5em;
+    margin-top: .3em;
+    font-weight: 500;
+}
+
+.dark {
+    color: #444444;
+}
+
+.team-1 {
+    background-color: #124E96;
+}
+
+.pricing {
+    background-color: #124E96;
+}
+
+.info-box {
+    padding-top: 50px;
+}
+
+.team-1.fdb-block img {
+    border-bottom: solid 0px;
+    width: 100%;
+    height:auto;
+}
+
+.hero-background {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left:0;
+}
+
+.icon-box {
+    font-size: 70px;
+    color: #000000;
+}
+
+
+.icon-box i {
+    color: #000000;
+}
+
+.single_feature {
+    height: 216px;
+}
+
+.mt-5 {
+    margin-top: 1rem!important;
+}
+
+.team-1.fdb-block .fdb-box {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.footer-bg {
+    background-color: #f6f6f6;
+}
+
+@media (min-width: 768px) {
+    .left-mrg {
+        margin-left: 25%;
+    }
+    .right-mrg {
+        margin-right: 25%;
+    }
+}

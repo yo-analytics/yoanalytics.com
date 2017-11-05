@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yo Analytics - business intelligence og datawarehouse hurtigt og nemt</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="./imgs/icon.ico">
+
+
+  <script src="http://localhost:35729/livereload.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link type="text/css" rel="stylesheet" href="./css/froala_blocks.css">
+  <link type="text/css" rel="stylesheet" href="./css/custom.css">
+  <link rel="stylesheet" href="./css/pe-icon-7-stroke.css">
+  <link rel="stylesheet" href="./css/helper.css">
+
+  <style>
+    #navigator {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #navigator a {
+      font-size: 14px;
+    }
+
+    #navigator + section {
+      padding: 250px 0;
+    }
+  </style>
+
+  <script>
+      $('a').click(function(){
+        $('html, body').animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+        }, 500);
+        return false;
+      });
+      </script>
+
+</head>
+
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="https://www.froala.com">
+          <img src="./imgs/logo.png" height="50" alt="image">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav1">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#ydelser">Ydelser</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#priser">Priser</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#holdet">Holdet</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav justify-content-end d-none d-lg-flex ml-md-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/yo-analytics"><i class="fa fa-github"></i></a>
+            </li>
+          </ul>
+
+          <a class="btn ml-md-3" href="#kontakt">Kontakt Os</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="fdb-block top-banner">
+    <div class="hero-background">
+        <canvas id="hero-bar"></canvas>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <h1>Få mest ud af din data!</h1>
+          <p class="text-h3">Yo Analytics er et konsulenthus, med fokus på data analyse til små og mellemstore virksomheder.
+            <br>Vi fokuserer på skalerbare løsninger, som passer til den moderne virksomhed.</p>
+
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="fdb-block">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12">
+            <h3><strong class="dark">Du er i godt selskab!</strong></h3>
+
+            <div class="mt-5 justify-content-center">
+              <img alt="image" height="30" class="ml-3 mr-3 mb-2 mt-2" src="./imgs/customers/adobe.svg">
+              <img alt="image" height="30" class="ml-3 mr-3 mb-2 mt-2" src="./imgs/customers/discovery.svg">
+              <img alt="image" height="30" class="ml-3 mr-3 mb-2 mt-2" src="./imgs/customers/ebay.svg">
+              <img alt="image" height="30" class="ml-3 mr-3 mb-2 mt-2" src="./imgs/customers/samsung.svg">
+              <img alt="image" height="30" class="ml-3 mr-3 mb-2 mt-2" src="./imgs/customers/orange.svg">
+              <img alt="image" height="30" class="ml-3 mr-3 mb-2 mt-2" src="./imgs/customers/salesforce.svg">
+            </div>
+            <div class="mt-2 mt-md-5 justify-content-center">
+              <img alt="image" height="30" class="ml-3 mr-3 mb-2 mt-2" src="./imgs/customers/cisco.svg">
+              <img alt="image" height="30" class="ml-3 mr-3 mb-2 mt-2" src="./imgs/customers/apple.svg">
+              <img alt="image" height="30" class="ml-3 mr-3 mb-2 mt-2" src="./imgs/customers/ibm.svg">
+              <img alt="image" height="30" class="ml-3 mr-3 mb-2 mt-2" src="./imgs/customers/intel.svg">
+              <img alt="image" height="30" class="ml-3 mr-3 mb-2 mt-2" src="./imgs/customers/panasonic.svg">
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-left info-box">
+            <div class="col-12 col-md-6">
+              <h3><strong class="dark">Awesome Things</strong></h3>
+              <p class="text-h3 dark">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far from the countries Vokalia and Consonantia.</p>
+            </div>
+            <div class="col-12 col-md-6 pt-5 pt-md-0">
+              <h3></h3><strong class="dark">More Awesomeness</strong></h3>
+              <p class="text-h3 dark">Separated they live in Bookmarksgrove right at the coast of the Semantics, far far away, behind the word mountains, far from the countries <a href="https://www.froala.com">Vokalia and Consonantia</a>, there live the blind texts. </p>
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+
+    <section class="fdb-block team-1" id="holdet">
+        <div class="container">
+          <div class="row text-center justify-content-center">
+            <div class="col-8">
+              <h1>Holdet</h1>
+              <p class="text-h3">Se hvem vi er og hvad vi står for.</p>
+              </div>
+          </div>
+
+          <div class="row-50"></div>
+
+          <div class="row">
+              <div class="col-md-3 col-lg-offset-2 text-center left-mrg">
+                <div class="fdb-box">
+                  <img alt="image" class="img-fluid" src="./imgs/christian.png">
+
+                  <div class="content">
+                    <h3><strong class="dark">Christian Høfler-Simonsen</strong></h3>
+                    <p class="dark">Co-founder</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-3 text-center right-mrg">
+                <div class="fdb-box">
+                  <img alt="image" class="img-fluid" src="./imgs/christoffer.png">
+
+                  <div class="content">
+                    <h3><strong class="dark">Christoffer Elling-Hansson</strong></h3>
+                    <p class="dark">Co-founder</p>
+                  </div>
+                </div>
+                </div>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fdb-block" id="ydelser">
+          <div class="container">
+              <div class="row text-center justify-content-center">
+                  <div class="col-8">
+                    <h1 class="dark">Ydelser</h1>
+                    <p class="text-h3 dark">Vi leverer en lang række forskellige ydelser, så vi nemt og hurtigt kan sætte gang i dine analyser eller optimere det nuværende setup.</p>
+                    </div>
+                </div>
+
+                <div class="row-50"></div>
+            <div class="row text-center justify-content-sm-center no-gutters">
+
+              <div class="col-12 col-sm-6 col-md-4 m-auto single_feature">
+                <div class="icon-box">
+                  <i class="pe-7s-server" aria-hidden="true"></i>
+                </div>
+                <h3><strong class="dark">ETL & Datawarehouse</strong></h3>
+                <p class="dark">Få hjælp til at vælge de værktøjer der sikrer den bedste løsning for din virksomhed.</p>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4 m-auto single_feature">
+                  <div class="icon-box">
+                      <i class="pe-7s-browser" aria-hidden="true"></i>
+                  </div>
+                  <h3><strong class="dark">Data Modelering</strong></h3>
+                  <p class="dark">Vi hjælper med opsætning af datamodeller, så det er nemt for medarbejdere at begynde på rapporterningen.</p>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 m-auto single_feature">
+                    <div class="icon-box">
+                        <i class="pe-7s-edit" aria-hidden="true"></i>
+                    </div>
+                    <h3><strong class="dark">KPI Analyse</strong></h3>
+                    <p class="dark">Vi hjælper med at få styr på KPI'erne, så der bliver skabt mest mulig værdi.</p>
+                  </div>
+            </div>
+
+            <div class="row text-center justify-content-md-center pt-3 pt-md-5">
+                <div class="col-12 col-sm-6 col-md-4 m-auto single_feature">
+                    <div class="icon-box">
+                        <i class="pe-7s-look" aria-hidden="true"></i>
+                    </div>
+                    <h3><strong class="dark">Data Tracking</strong></h3>
+                    <p class="dark">På grund af kompleksitet eller mængde kan være svært at hive data ud af kilder. Vi vejleder i hvordan dette kan gøres mest effektivt.</p>
+                  </div>
+
+              <div class="col-12 col-sm-6 col-md-4 m-auto single_feature">
+                  <div class="icon-box">
+                      <i class="pe-7s-shuffle" aria-hidden="true"></i>
+                  </div>
+                  <h3><strong class="dark">Integrationer</strong></h3>
+                  <p class="dark">Virksomheder idag benytter en lang række af SaaS applikationer, hvilket vi kan hjælpe med at integrere.</p>
+                </div>
+
+              <div class="col-12 col-sm-6 col-md-4 m-auto single_feature">
+                  <div class="icon-box">
+                      <i class="pe-7s-notebook" aria-hidden="true"></i>
+                  </div>
+                  <h3><strong class="dark">Træning</strong></h3>
+                  <p class="dark">For at sikre den bedst mulige overgang, hjælper vi virksomheder med at uddanne deres medarbejdere.</p>
+                </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="fdb-block pricing" id="priser">
+            <div class="container">
+              <div class="row text-center">
+                <div class="col">
+                  <h1>Priser</h1>
+                </div>
+              </div>
+
+              <div class="row mt-5 align-items-center">
+                <div class="col-12 col-sm-10 col-md-8 m-auto col-lg-4 text-center">
+                  <div class="fdb-box p-4 br">
+                    <h2 class="dark">Integrationer</h2>
+                    <p class="text-h3 dark">Udtræk fra API'er</p>
+                    <p class="text-h3 dark">Data integrationer</p>
+                    <p class="text-h3 dark">SQL programmering</p>
+                    <p class="text-h2 mt-5 mb-5 dark">35.000,-</p>
+
+                    <p><a href="https://www.froala.com" class="btn">Kontakt os</a></p>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-10 col-md-8 m-auto col-lg-4 text-center pt-4 pt-lg-0">
+                  <div class="fdb-box p-4 br">
+                    <h2 class="dark">Datawarehouse</h2>
+                    <p class="text-h3 dark">Konfiguration og optimering</p>
+                    <p class="text-h3 dark">Dashboard opbygning</p>
+                    <p class="text-h3 dark">KPI rapportering</p>
+
+                    <p class="text-h2 mt-5 mb-5 dark">25.000,-</p>
+
+                    <p><a href="https://www.froala.com" class="btn">Kontakt os</a></p>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-10 col-md-8 m-auto col-lg-4 text-center pt-4 pt-lg-0">
+                  <div class="fdb-box p-4 br">
+                    <h2 class="dark">Analyse</h2>
+                    <p class="text-h3 dark">Data analyse</p>
+                    <p class="text-h3 dark">Forecasting</p>
+                    <p class="text-h3 dark">Data modellering </p>
+                    <p class="text-h2 mb-5 mt-5 dark">35.000,-</p>
+
+                    <p><a href="https://www.froala.com" class="btn">Kontakt os</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="fdb-block" id="kontakt">
+
+              <div class="container">
+                <div class="row mt-5">
+                  <div class="col-12 col-md-6 col-lg-5">
+                    <h2 class="dark">Kontakt Os</h2>
+                    <p class="text-h3 dark">
+                      Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
+                    </p>
+
+                    <p class="text-h3 dark">
+                      It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                    </p>
+
+                    <p class="text-h3 mt-5">
+                      <strong class="dark">Email:</strong> <a href="https://www.froala.com" class="dark">kontakt@yoanalytics.com</a>
+                    </p>
+                    <p class="text-h3 dark">
+                      <strong class="dark">Phone:</strong> <a href="https://www.froala.com" class="dark"> +45 29 91 92 92</a>
+                    </p>
+                  </div>
+
+                  <div class="col-12 col-md-6 ml-auto pt-5 pt-md-0">
+                    <form>
+                      <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Fornavn">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Efternavn">
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col">
+                          <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col">
+                          <textarea class="form-control" name="message" rows="10" placeholder="Hvordan kan vi hjælpe?"></textarea>
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col">
+                          <button type="submit" class="btn">Send</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          <footer class="fdb-block footer-small footer-bg">
+              <div class="container">
+                <div class="row text-center align-items-center">
+                  <div class="col">
+                    <p class="text-h5 mt-5 dark">Copyright 2017 Alle rettigheder forbeholdt.</p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+        <script>
+
+          var ctx = document.getElementById("hero-bar").getContext('2d');
+          var data = [],
+          barsCount = 50,
+          labels = new Array(barsCount),
+          updateDelayMax = 500,
+          random = function(max){ return Math.round(Math.random()*100)};
+
+          helpers = Chart.helpers;
+
+
+
+          for (var i = barsCount - 1; i >= 0; i--) {
+            data.push(Math.round(Math.random() * 100));
+          };
+
+          var heroChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                  labels: labels,
+                  datasets : [{
+                    fillColor: "rgba(255,255,255, 0.5)",
+                    data : data
+                }]
+              },
+              options: {
+                scales: {
+                  yAxes: [{
+                      display : false,
+                      drawBorder: false,
+                  }],
+                  xAxes: [{
+                      display: false,
+                      drawBorder: false
+                  }]
+                },
+                tooltips: {
+                    enabled: false
+                },
+                legend: {
+                    display: false,
+                },
+                animation: {
+                  onComplete: function(animation) {
+                    randomUpdate()
+                  }
+                }
+              }
+          });
+
+          function randomUpdate(){
+              var timeout;
+              heroChart.stop();
+              clearTimeout(timeout);
+              // Get a random bar
+              timeout = setTimeout(function(){
+                  var randomNumberOfBars = Math.floor(Math.random() * barsCount),
+                      i;
+                  for (i = randomNumberOfBars - 1; i >= 0; i--) {
+                      heroChart.data.datasets[0].data[Math.floor(Math.random() * barsCount)] = Math.round(Math.random() * 100);
+                  };
+                  heroChart.update();
+              },Math.random() * updateDelayMax);
+          };
+
+        </script>
+</body>
+</html>
